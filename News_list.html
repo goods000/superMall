@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+	</head>
+	<body>
+		<div class="header h1">
+			<a class="back" href="javascript:history.back(-1);"><img src="images/back1.png"/></a>
+			<span class="txt">平台公告</span>
+		</div>
+		<div class="news_list">
+			<h6>08-20</h6>
+			<div class="news_li">
+				<h2>CPC上线通知</h2>
+				<span>尊敬的消费链用户，您好</span>
+				<p>超级链商城超级链商城超级链商城超级链商城超级链商城超级链商城超级链商城超级链商城超级链商城超级链商城</p>
+				<a href="news.html">查看详情</a>
+			</div>
+			<div class="news_li">
+				<h2>CPC上线通知</h2>
+				<span>尊敬的消费链用户，您好</span>
+				<p>超级链商城！超级链商城！超级链商城！超级链商城！超级链商城！超级链商城！超级链商城！超级链商城！超级链商城！超级链商城！超级链商城！</p>
+				<a href="news.html">查看详情</a>
+			</div>
+		</div>
+		<div id="wowocao">
+			<div ui-view ng-hide="myCheck" class="fade"></div>
+		</div>
+		<script>
+            	$(".wocao").click(function(){
+            		$("#wowocao").css({"position":"absolute","right":"0px"});
+            	})
+            </script>
+	</body>
+</html>

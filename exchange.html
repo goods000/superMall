@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<style type="text/css">
+			.dui_bi{display: flex;flex-direction: row;align-items: center;}
+			.e_box{background: #FFFFFF;margin-top: 10px;padding-bottom: 20px;border-radius: 10px 10px 0 0;/*margin-top: 100%;*/}
+			.ex_buy{border-bottom: none !important;}
+			.dui_bi span{text-align: left;}
+			.dui_bi span p{color: #979899;font-size: 10px;}
+			.dui_bi img{width: 20%;margin-right: 15px;}
+			.zi_buy{box-shadow:0px 0px 0px 0px;border-bottom: 1px solid #F5F5F5;margin: 0px;}
+		</style>
+	</head>
+	<body>
+		<!--头部标题-->
+		<div class="header">
+			<a class="back" href="javascript:history.back(-1);"><img src="images/back.png"/></a>
+			<span class="txt">兑换</span>
+		</div>
+
+		<div class="exchangeBox">
+			<div class="exchange_top">
+				<div class="exchange_s">
+					<div class="exchange_title">
+						<span class="click"><img src="images/USDT.png" id="map"/><span class="value_a">USDT</span><img src="images/next.png" class="select"/></span>
+					</div>
+					<img src="images/jiao.png" class="huzhuan"/>
+					<div class="exchange_title">
+						<span><img src="images/jifen.png"/><span>购物积分</span></span>
+					</div>
+				</div>
+				<div class="text">
+					<input type="number" placeholder="请输入兑换数量" name="" id="num" value="" />
+					<span class="shu">
+						4545454
+					</span>
+				</div>
+				<div class="text">
+					<input type="password" placeholder="请输入交易密码" name="" id="re_pwd" value="" />
+				</div>
+			</div>
+		</div>
+		
+			<input type="button" id="sub" class="btn_submit" value="兑换" />
+		
+		<div id="mo">
+			<div class="close"></div>
+			<div class="e_box">
+				<p class="yong">选择类型</p>
+				<div class="zi_buy">
+					<div class="dui_bi">
+						<img src="images/USDT.png"/>
+						<span>
+							<span class="bi_style">USDT</span>
+							<p>余额:1,343980909,54</p>
+						</span>
+					</div>
+					<img src="images/chioce.png" class="chioce"/>
+				</div>
+				<div class="zi_buy">
+					<div class="dui_bi">
+						<img src="images/LGC.png"/>
+						<span>
+							<span class="bi_style">LGC</span>
+							<p>余额:1,343980909,54</p>
+						</span>
+					</div>
+					<img src="images/nochoice.png" class="chioce"/>
+				</div>
+				<div class="zi_buy ex_buy">
+					<div class="dui_bi">
+						<img src="images/FANCO.png"/>
+						<span>
+							<span class="bi_style">FANCO</span>
+							<p>余额:1,343980909,54</p>
+						</span>
+					</div>
+					<img src="images/nochoice.png" class="chioce"/>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(".click").click(function(){
+			$("#mo").css("display","block");
+		})
+
+		$(".close").click(function(){
+			$("#mo").css("display","none");
+		})
+		
+		$(".btn_submit").click(function() {
+		var num = $("#num").val();
+		var re_pwd = $("#re_pwd").val();
+	
+		//是否非空
+		if(!isKong(num, $("#num").attr("placeholder"))) {
+			return false;
+		}
+		//是否非空
+		if(!isKong(re_pwd, $("#re_pwd").attr("placeholder"))) {
+			return false;
+		}
+	
+		mui.alert("", "兑换成功", "确定", function() {
+			window.location.href = "";
+		})
+	
+	})
+
+		var toggle = true;
+		$(".zi_buy").each(function() {
+			$(".zi_buy").click(function() {
+				if(toggle) {
+					$(this).find(".chioce").attr("src", "images/chioce.png").parent().siblings().find(".chioce").attr("src", "images/noChoice.png")
+					$(".value_a").html($(this).find(".dui_bi span .bi_style").html());
+					$("#map").attr("src",$(this).find(".dui_bi img").attr('src'));
+					console.log($(this).find(".dui_bi span .bi_style").html())
+					console.log($(this).find(".dui_bi img").attr('src'))
+					toggle = false;
+				} else {
+					$(this).find(".chioce").attr("src", "images/chioce.png").parent().siblings().find(".chioce").attr("src", "images/noChoice.png")
+					toggle = true;
+				}
+			});
+		});
+	</script>
+</html>

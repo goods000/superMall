@@ -1,0 +1,67 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>   -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+<meta name="keywords" content="超级链商城" />
+<meta name="description" content="超级链商城" />
+<title>超级链商城</title>
+<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+<link rel="stylesheet" href="css/mui.min.css">
+<script src="js/mui.min.js"></script>
+<link rel="stylesheet" href="css/public.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.11.0.min.js"></script>
+		
+<script src="/js/jquery-1.11.0.min.js"></script>
+
+<style type="text/css">
+	body{background: #F7F7F7;}
+	.paysuccess{text-align: center;width: 80%;margin: auto;border-radius: 10px;background: #fff;margin-top: 4rem;padding: 20px 40px;}
+	.title{font-size: 1.6rem;font-weight: 400;}
+	.paysuccess .ico{width: 2rem;vertical-align: middle;margin-right: 10px;}
+	.info{padding: 10px;}
+	.group{display: flex;font-size: 0.8rem;color: #666;margin-top: 10px;}
+	.group label{margin-right: 2px;}
+	.group .price{color: red;}
+	.btn{display: flex;justify-content: space-between;margin-top: 2rem;padding: 10px;}
+	.btn a{display: block;width: 45%;text-align: center;height: 3rem;line-height: 3rem;
+	color: #666;border: 1px solid #ddd;border-radius: 5px;font-size: 1rem;}
+</style>
+</head>
+<body>
+	<div class="paysuccess">
+		<h4 class="title"><img src="images/duigou.png" class="ico"> <span>支付成功</span></h4>
+		<div class="info">
+			<div class="group">
+				<label>订单号:</label>
+				<span>1224</span>
+			</div>
+			<div class="group">
+				<label>收货人:</label>
+				<span>占山</span>
+			</div>
+			<div class="group">
+				<label>收货地址:</label>
+				<span>广东省深圳市宝安区</span>
+			</div>
+			<div class="group">
+				<label>金额:</label>
+				<span class="price">￥300.00</span>
+			</div>
+		</div>
+		<div class="btn">
+			<a href="index.html">继续逛逛</a>
+			<a href="order_detail.html">查看订单</a>
+		</div>
+		<!-- <a href="/ss/user/getUserInfo" class="btn">确定</a> -->
+	</div>
+</body>
+</html>

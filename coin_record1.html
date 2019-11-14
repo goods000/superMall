@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		 <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<!-- <script src="layer/layer.js"></script> -->
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{background: #F7F7F7;}
+			.store{font-size: 1.1rem;color: #1F1F1F;display: flex;align-items: center;}
+			.store img{width: 1.1rem;}
+			.order .tab a{width: 33.33%;}
+			.order .tab .p{width: 25%;}
+			.tab a.active {color: #FF3336;}
+			.order .list li .top{padding: 0px;}
+			.order .nav{overflow: hidden;background: #fff;}
+			.order .nav a{float:left;display: inline-block;width: 25%;text-align: center;padding: 1rem 0;font-size: 1rem;color: #222;position: relative;}
+			.order .nav a.active{color: #FF3336;}
+			.order .nav a.active::after{content: " ";position: absolute;bottom: 0;left: 25%;width: 50%;height: 2px; background:  #FF3336;}
+			.list .ul{overflow: hidden;display: none;}
+			.list .ul.on{display: block;}
+			.list .ul .top{flex-direction: column;align-items: flex-start !important;}
+			.list .ul .top .jl{margin: 5px 0;display: flex;width: 100%;}
+			.list .ul .top .jl span{width: 25%;letter-spacing: 2px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;display: inline-block;}
+			.list .ul .top .jl s{text-decoration: none;word-break: break-all;width: 75%;}
+			.list .ul .top .jl:nth-child(1) s{color: #FF3336;}
+			.order .nav1{overflow: hidden;background: #fff;}
+			.order .nav1 a{float:left;display: inline-block;width: 25%;text-align: center;padding: 1rem 0;font-size: 1rem;color: #222;position: relative;}
+			.order .nav1 a.active{color: #FF3336;}
+			.order .nav1 a.active::after{content: " ";position: absolute;bottom: 0;left: 25%;width: 50%;height: 2px; background:  #FF3336;}
+			.order .nav1 a{width: 50%;}
+			.li{overflow: hidden;display: none;}
+			.li.on{display: block;}
+			.ul_box{width: 100% !important;}
+			.ul_box li{margin: 10px;padding: 10px !important;}
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<a class="back" href="javascript:history.back(-1);"><img src="images/back.png" /></a>
+			<span class="txt">记录</span>
+		</div>
+
+		<div class="order">
+			
+			<div class="tab">
+				<a href="javascritp:;" class="active">USDT</a>
+				<a href="javascritp:;">lGC</a>
+				<a href="javascritp:;">FANCO</a>
+			</div>
+			<!--USDT-->
+			<div class="list on">
+				<div class="nav">
+					<a href="javascritp:;" class="active p">充币</a>
+					<a href="javascritp:;" class="p">提币</a>
+					<a href="javascritp:;" class="p">兑换</a>
+					<a href="javascritp:;" class="p">互转</a>
+				</div>
+				<!--充币-->
+				<ul class="ul on">
+					<li>
+						<div class="top">
+							<p class="jl"><span>充币数量:</span><s>111111111</s></p>
+							<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+							<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+							<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+							<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+						</div>
+					</li>
+					<li>
+						<div class="top">
+							<p class="jl"><span>充币数量:</span><s>11111111</s></p>
+							<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+							<p class="jl"><span>订单号码:</span><s>4adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+							<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+							<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+						</div>
+					</li>
+				</ul>
+				<!--提币-->
+				<ul class="ul">
+					<li>
+						<div class="top">
+							<p class="jl"><span>充币数量:</span><s>2222222</s></p>
+							<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+							<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+							<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+							<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+						</div>
+					</li>
+				</ul>
+				<!--兑换-->
+				<ul class="ul">
+					<li>
+						<div class="top">
+							<p class="jl"><span>充币数量:</span><s>333333</s></p>
+							<p class="jl"><span>充币地址:</span><s>615asfasf46546874631563454</s></p>
+							<p class="jl"><span>订单号码:</span><s>5546546874631563454</s></p>
+							<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+							<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+						</div>
+					</li>
+				</ul>
+				<!--互转-->
+				<ul class="ul ul_box">
+					<div class="nav1">
+						<a href="javascritp:;" class="active">转入</a>
+						<a href="javascritp:;">转出</a>
+					</div>
+					<ul class="li on">
+						<li>
+							<div class="top">
+								<p class="jl"><span>充币数量:</span><s>4411111</s></p>
+								<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+								<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+								<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+								<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+							</div>
+						</li>
+					</ul>		
+					<ul class="li">
+						<li>
+							<div class="top">
+								<p class="jl"><span>充币数量:</span><s>44442222</s></p>
+								<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+								<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+								<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+								<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+							</div>
+						</li>
+						<li>
+							<div class="top">
+								<p class="jl"><span>充币数量:</span><s>1600</s></p>
+								<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+								<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+								<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+								<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+							</div>
+						</li>
+					</ul>
+				</ul>
+
+			</div>
+
+			<!--lGC-->
+			<div class="list">
+				<div class="nav">
+					<a href="javascritp:;" class="active p">充币</a>
+					<a href="javascritp:;" class="p">提币</a>
+					<a href="javascritp:;" class="p">兑换</a>
+					<a href="javascritp:;" class="p">互转</a>
+				</div>
+				<!--充币-->
+				<ul class="ul on">
+					<li>
+						<div class="top">
+							<p class="jl"><span>充币数量:</span><s>lgc1111</s></p>
+							<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+							<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+							<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+							<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+						</div>
+					</li>
+					<li>
+						<div class="top">
+							<p class="jl"><span>充币数量:</span><s>1600</s></p>
+							<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+							<p class="jl"><span>订单号码:</span><s>4adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+							<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+							<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+						</div>
+					</li>
+				</ul>
+				<!--提币-->
+				<ul class="ul">
+					<li>
+						<div class="top">
+							<p class="jl"><span>充币数量:</span><s>lgc222</s></p>
+							<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+							<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+							<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+							<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+						</div>
+					</li>
+				</ul>
+				<!--兑换-->
+				<ul class="ul">
+					<li>
+						<div class="top">
+							<p class="jl"><span>充币数量:</span><s>lgc3333</s></p>
+							<p class="jl"><span>充币地址:</span><s>615asfasf46546874631563454</s></p>
+							<p class="jl"><span>订单号码:</span><s>5546546874631563454</s></p>
+							<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+							<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+						</div>
+					</li>
+				</ul>
+				<!--互转-->
+				<ul class="ul ul_box">
+					<div class="nav1">
+						<a href="javascritp:;" class="active">转入</a>
+						<a href="javascritp:;">转出</a>
+					</div>
+					<ul class="li on">
+						<li>
+							<div class="top">
+								<p class="jl"><span>充币数量:</span><s>lgc444</s></p>
+								<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+								<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+								<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+								<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+							</div>
+						</li>
+					</ul>		
+					<ul class="li">
+						<li>
+							<div class="top">
+								<p class="jl"><span>充币数量:</span><s>lgc444</s></p>
+								<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+								<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+								<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+								<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+							</div>
+						</li>
+					</ul>
+				</ul>
+
+			</div>
+
+			<!--FANCO-->
+			<div class="list">
+				<div class="nav">
+					<a href="javascritp:;" class="active p">充币</a>
+					<a href="javascritp:;" class="p">提币</a>
+					<a href="javascritp:;" class="p">兑换</a>
+					<a href="javascritp:;" class="p">互转</a>
+				</div>
+				<!--充币-->
+				<ul class="ul on">
+					<li>
+						<div class="top">
+							<p class="jl"><span>充币数量:</span><s>fan1111</s></p>
+							<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+							<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+							<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+							<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+						</div>
+					</li>
+					<li>
+						<div class="top">
+							<p class="jl"><span>充币数量:</span><s>1600</s></p>
+							<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+							<p class="jl"><span>订单号码:</span><s>4adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+							<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+							<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+						</div>
+					</li>
+				</ul>
+				<!--提币-->
+				<ul class="ul">
+					<li>
+						<div class="top">
+							<p class="jl"><span>充币数量:</span><s>fan222</s></p>
+							<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+							<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+							<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+							<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+						</div>
+					</li>
+				</ul>
+				<!--兑换-->
+				<ul class="ul">
+					<li>
+						<div class="top">
+							<p class="jl"><span>充币数量:</span><s>fan3333</s></p>
+							<p class="jl"><span>充币地址:</span><s>615asfasf46546874631563454</s></p>
+							<p class="jl"><span>订单号码:</span><s>5546546874631563454</s></p>
+							<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+							<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+						</div>
+					</li>
+				</ul>
+				<!--互转-->
+				<ul class="ul ul_box">
+					<div class="nav1">
+						<a href="javascritp:;" class="active">转入</a>
+						<a href="javascritp:;">转出</a>
+					</div>
+					<ul class="li on">
+						<li>
+							<div class="top">
+								<p class="jl"><span>充币数量:</span><s>fan444</s></p>
+								<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+								<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+								<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+								<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+							</div>
+						</li>
+					</ul>		
+					<ul class="li">
+						<li>
+							<div class="top">
+								<p class="jl"><span>充币数量:</span><s>fan444</s></p>
+								<p class="jl"><span>充币地址:</span><s>afasdf45adf46fasdf5135454615asfasf46546874631563454</s></p>
+								<p class="jl"><span>订单号码:</span><s>dsf454s4545asdfasdfsdfasdfasd454adf545a4fds45454sdg54sdf5gfasdf6513546546874631563454</s></p>
+								<p class="jl"><span>提币时间:</span><s>2019-06-14 15:45:44</s></p>
+								<p class="jl"><span>流水账号:</span><s>201906115656565455</s></p>
+							</div>
+						</li>
+					</ul>
+				</ul>
+
+			</div>
+			
+			<!--没有数据时显示-->
+			<div class="kong">
+				<img src="images/kong.png" />
+				<p>暂无记录</p>
+			</div>
+
+		</div>
+		
+		<!--底部-->
+		<!-- <div id="footer" name="4"></div>
+		<script src="js/public.js"></script> -->
+
+		<script>
+
+			function show() {
+				//没有数据的时候显示
+				if($(".list.on li").length <= 0) {
+					$(".kong").show();
+				} else {
+					$(".kong").hide();
+				}
+			}
+			
+			var $div_li = $('.tab a');
+	        $('.tab a').click(function(){
+	            $(this).addClass("active").siblings().removeClass("active"); 
+	                var index =  $div_li.index(this);  
+	            $("div.list").removeClass("on").eq(index).addClass("on");
+	            $(".on .nav a").eq(index).addClass("active").siblings().removeClass("active");
+	            $(".ul").eq(index).addClass("on").siblings().removeClass("on");
+			})	
+			
+
+			$(".nav a").click(function() {
+				var index = $(".nav a").index($(this));
+				$(".nav a").removeClass("active").eq(index).addClass("active");
+				$(".on .nav .a").eq(index).addClass("active");
+				$(".ul").eq(index).addClass("on").siblings().removeClass("on");
+			})
+
+			$(".nav1 a").click(function() {
+				var index = $(".nav1 a").index($(this));
+				$(".nav1 a").removeClass("active").eq(index).addClass("active");
+				$(".li").removeClass("on").eq(index).addClass("on");
+			})
+			
+		</script>
+
+	</body>
+
+</html>

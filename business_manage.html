@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script src="layer/layer.js"></script>
+		<style type="text/css">
+			.order .tab a{width:33.3%;}
+			.order .list li{margin-bottom:10px;position:relative;}
+			.order .list .li{border:0;border-bottom:1px solid #ddd;}
+			.order .list .li .l{width:calc(100% - 7rem)}
+			.btn{display:flex;}
+			.btn a{font-size:1rem;color:#333;margin-left:1rem;}
+			.btn a img{width:2rem;vertical-align:middle;}
+			.listate{   position: absolute;top: 0; right: 0;text-align: center;}
+			.listate img{width:4rem;}
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<a class="back" href="business_user.html"><img src="images/back.png" /></a>
+			<span class="txt">订单管理</span>
+		</div>
+
+		<div class="order">
+			
+			<div class="tab">
+				<a href="javascritp:;" class="active">在售商品(1)</a>
+				<a href="javascritp:;">下架商品(2)</a>
+				<a href="javascritp:;">审核商品(2)</a>
+			</div>
+
+			<!--全部-->
+			<div class="list on">
+				<ul>
+					<li>
+						<a href="order_detail.html">
+						<div class="li">
+							<div class="">
+								<img src="images/pro.png" class="img" />
+							</div>
+							<div class="l">
+								<p class="name">秋冬日式棉拖鞋</p>
+								<p class="p p1">一双</p>
+								<p class="p p2"><label>￥</label> 240</p>
+							</div>
+						</div>
+						<div class="bottom">
+							<!-- <p class="l">时间：2018.10.23</p> -->
+							<p class="btn">
+								<a href="business_editgoods.html" class="edit">编辑 <img src="images/business_edit.png" ></a>
+								<a href="javascript:;" class="lower">下架 <img src="images/business_lower1.png" ></a>
+								<a href="javascript:;" class="delet">删除 <img src="images/business_delet.png" ></a>
+							</p>
+						</div>
+						</a>
+					</li>
+					<li>
+						<a href="order_detail.html">
+						<div class="li">
+							<div class="">
+								<img src="images/pro.png" class="img" />
+							</div>
+							<div class="l">
+								<p class="name">秋冬日式棉拖鞋</p>
+								<p class="p p1">一双</p>
+								<p class="p p2"><label>￥</label> 240</p>
+							</div>
+						</div>
+						<div class="bottom">
+							<!-- <p class="l">时间：2018.10.23</p> -->
+							<p class="btn">
+								<a href="business_editgoods.html" class="edit">编辑 <img src="images/business_edit.png" ></a>
+								<a href="javascript:;" class="lower">下架 <img src="images/business_lower1.png" ></a>
+								<a href="javascript:;" class="delet">删除 <img src="images/business_delet.png" ></a>
+							</p>
+						</div>
+						</a>
+					</li>
+				</ul>
+
+				<!--没有数据时显示-->
+				<div class="kong">
+					<img src="images/kong.png" />
+					<p>暂无记录</p>
+				</div>
+
+			</div>
+
+			<!--下架-->
+			<div class="list">
+				<ul>
+					<li>
+						<a href="order_detail.html">
+						<div class="li">
+							<div class="">
+								<img src="images/pro.png" class="img" />
+							</div>
+							<div class="l">
+								<p class="name">秋冬日式棉拖鞋</p>
+								<p class="p p1">一双</p>
+								<p class="p p2"><label>￥</label> 240x</p>
+							</div>
+						</div>
+						<div class="bottom">
+							<!-- <p class="l">时间：2018.10.23</p> -->
+							<p class="btn">
+								<a href="business_editgoods.html" class="edit">编辑 <img src="images/business_edit.png" ></a>
+								<a href="javascript:;" class="upper">上架 <img src="images/business_lower1.png" ></a>
+								<a href="javascript:;" class="delet">删除 <img src="images/business_delet.png" ></a>
+							</p>
+						</div>
+						</a>
+						<span class="listate"><img src="images/state_lower.png" ></span>
+					</li>
+				</ul>
+
+				<!--没有数据时显示-->
+				<div class="kong">
+					<img src="images/kong.png" />
+					<p>暂无记录</p>
+				</div>
+			</div>
+
+			<!--审核中-->
+			<div class="list">
+				<ul>
+					<li>
+						<a href="order_detail.html">
+						<div class="li">
+							<div class="">
+								<img src="images/pro.png" class="img" />
+							</div>
+							<div class="l">
+								<p class="name">秋冬日式棉拖鞋</p>
+								<p class="p p1">一双</p>
+								<p class="p p2"><label>￥</label> 240</p>
+							</div>
+						</div>
+						<div class="bottom">
+							<!-- <p class="l">时间：2018.10.23</p> -->
+							<p class="btn">
+								<a href="business_editgoods.html" class="edit">编辑 <img src="images/business_edit.png" ></a>
+								<a href="javascript:;" class="delet">删除 <img src="images/business_delet.png" ></a>
+							</p>
+						</div>
+						</a>
+						<span class="listate"><img src="images/state_examine.png" ></span>
+					</li>
+				</ul>
+
+				<!--没有数据时显示-->
+				<div class="kong">
+					<img src="images/kong.png" />
+					<p>暂无记录</p>
+				</div>
+			</div>
+
+		</div>
+		
+		<!--底部-->
+		<!-- <div id="footer" name="4"></div>
+		<script src="js/public.js"></script> -->
+
+		<script>
+		//获取浏览器参数
+    function getQueryString(name) {
+    
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+    var type = getQueryString("type");	
+	$(".tab a").removeClass("active").eq(type-1).addClass("active");
+	$(".list").removeClass("on").eq(type-1).addClass("on");	
+			
+			show();
+
+			function show() {
+				//没有数据的时候显示
+				if($(".list.on li").length <= 0) {
+					$(".kong").show();
+				} else {
+					$(".kong").hide();
+				}
+			}
+
+			$(".tab a").click(function() {
+				var index = $(".tab a").index($(this));
+				$(".tab a").removeClass("active").eq(index).addClass("active");
+				$(".list").removeClass("on").eq(index).addClass("on");
+				show();
+			})
+			
+			//下架
+			$(".lower").click(function(){
+					layer.open({
+					title:"确认下架？"
+					// ,content:"<textarea placeholder='填写下架原因' class='reason' style='padding: 1rem;width: 100%;'></textarea>"
+					,btn: ['确认','取消'] //按钮
+					,yes:function(){
+					    layer.msg('请等待，工作人员会处理', {icon: 1,time: 2000,end:function(){
+							location.reload();
+						}
+					  });
+					}
+				});
+			})
+			//上架
+			$(".upper").click(function(){
+					layer.open({
+					title:"确认上架？"
+					// ,content:"<textarea placeholder='填写上架原因' class='reason' style='padding: 1rem;width: 100%;'></textarea>"
+					,btn: ['确认','取消'] //按钮
+					,yes:function(){
+					    layer.msg('请等待，工作人员会处理', {icon: 1,time: 2000,end:function(){
+							location.reload();
+						}
+					  });
+					}
+				});
+			})
+			
+			
+			
+		</script>
+
+	</body>
+
+</html>

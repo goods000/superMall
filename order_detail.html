@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		
+		<!-- <script src="layer/layer.js"></script> -->
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.tui{display: flex;justify-content: flex-end;padding: 10px;}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<a class="back" href="javascript:history.back(-1);"><img src="images/back.png"/></a>
+			<span class="txt">订单详情</span>
+		</div>
+		<div class="order-info">
+			<div class="order-info-top">
+				<div class="order-info-top-l">
+					<p class="status">待收货</p>
+					<p>等待买家收货</p>
+				</div>
+				<div class="order-info-top-r">
+					<a href="javascript:;" class="det">投诉</a>
+					<a href="javascript:;" class="to" onclick="confirm_receipt(this)">确认收货</a>
+				</div>
+			</div>
+				<div class="order-proOrder">
+					<p class="order-info-no">订单号：<span>11252415</span></p>
+					<p class="order-info-time">订单号：<span>2017-10-10 08:09:50</span></p>
+					<p class="order-info-user">收货信息：<span>东方不败</span> <span>13455266635</span></p>
+					<p class="order-info-add">北京市东城区建国大门内大街25号</p>
+				</div>
+				<div class="order-proBg">
+				<div class="order-pro">
+					<a href="pro_detail.html">
+					<img src="images/pro.png" />
+					<div class="order-pro-l">
+						<p class="name">文艺复古系列豹纹眼框</p>
+						<p class="instro">琥珀色   56cm</p>
+						<p class="price"><span class="new">￥123</span> <span class="old">￥220</span></p>
+					</div>
+					</a>
+				</div>
+				<div class="order-pro">
+					<a href="pro_detail.html">
+					<img src="images/pro.png" />
+					<div class="order-pro-l">
+						<p class="name">文艺复古系列豹纹眼框</p>
+						<p class="instro">琥珀色   56cm</p>
+						<p class="price"><span class="new">￥123</span> <span class="old">￥220</span></p>
+					</div>
+					</a>
+				</div>
+				<div class="tui">
+					<span class="tuikuan" onclick='tuiKuan()'>退款/退货</span>
+				</div>
+				</div>
+				
+				<div class="order-info-style">
+					<p class="l">配送方式</p>
+					<p class="r">普通快递￥0，新疆、西藏地区暂不支持</p>
+				</div>
+				<div class="order-info-liuyan">
+					<p class="l">买家留言</p>
+					<p class="r">不要黑色，不要有损坏哦</p>
+				</div>
+				<div class="order-info-bottom">
+					<div class="div">
+						<p class="l">商品金额</p>
+						<p class="r">￥99.00</p>
+					</div>
+					<div class="div">
+						<p class="l">运费</p>
+						<p class="r red">￥0.00</p>
+					</div>
+					<!-- <div class="div">
+						<p class="l">消费券</p>
+						<p class="r">￥900</p>
+					</div> -->
+					<div class="div">
+						<p class="l">应付金额</p>
+						<p class="r red">￥109.00</p>
+					</div>
+					<div class="div">
+						<p class="l">支付方式</p>
+						<p class="r">支付宝</p>
+					</div>
+					<div class="div">
+						<p class="l">退款详情</p>
+					</div>
+					<div class="div">
+						<p class="l">退款原因</p>
+						<p class="r">其他</p>
+					</div>
+					<div class="div">
+						<p class="l">退款金额</p>
+						<p class="r">44</p>
+					</div>
+					<div class="div">
+						<p class="l">申请时间</p>
+						<p class="r">2019.07.27</p>
+					</div>
+				</div>
+		</div>
+		<div class="mui-popover mui-popover-action mui-popover-bottom" id="tuikuan_box">
+			<div class="tuikuan_box " >
+				<div class="div">
+					<label>退款原因:</label>
+					<select id="select">
+						<option value ="">请选择</option>
+						<option value ="1">拍错/多拍/不想要</option>
+						<option value ="2">缺货</option>
+						<option value ="3">缺货</option>
+						<option value ="4">其他</option>
+					</select>
+					<img src="images/more.png" class="ico" >
+				</div>
+				<div class="div">
+					<label>退款金额:</label>
+					<div class="r price">￥24.00</div>
+				</div>
+				<div class="div">
+					<label>退款说明:</label>
+					<input type="text" name="" id="reason" value="" placeholder="选填"/>
+				</div>
+				
+				<div class="div" style="display:block;">
+					<label><s>*</s> 上传凭证</label>
+					<div class="uplaod_box">
+						<div class="upload">
+							<div class="photo">
+								<div class="photo_l">
+									<img src="images/add1.png" class="ico"/> 
+									<p class="p">点击上传上传凭证</p>
+								</div>
+								<input type="file" class="file" id="file" onchange="preview(this)" placeholder="请上传上传凭证"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<input type="button" name="" id="" class="submit" value="提交" />
+			</div>
+		</div>
+		<script>
+			$(".det").click(function(){
+				layer.confirm('确认取消订单？', {
+					  btn: ['确认','取消'] //按钮
+					, yes:function(){
+					  layer.msg('取消订单成功', {icon: 1,time: 2000,end:function(){
+						location.reload();
+						}
+					  });
+					}
+				});
+			})
+		</script>
+	<script src="js/check.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>	
+			<script>
+				// 确认收货
+				function confirm_receipt(obj){
+					var btnArray = ['取消', '确认'];
+					mui.confirm('','确认收货？', btnArray, function(e) {
+						if (e.index == 1) {
+							mui.alert("","收货成功","确定",function(){
+								window.location.href = "";
+							})
+						} else {
+							mui.toast("取消")
+						}
+					})
+				}
+			function tuiKuan(){
+				mui('#tuikuan_box').popover('show');
+			}
+			
+			//图片预览
+			 function preview(file) {
+				var img;
+				var parent=$(file).prev();
+				if (file.files && file.files[0]) {
+					var reader = new FileReader();
+					reader.onload = function (evt) {
+						var src=evt.target.result;
+						img='<img src="' + evt.target.result + '" class="img"/>';
+					//	console.log(img)
+						parent.html(img);
+					}
+					reader.readAsDataURL(file.files[0]);
+				} else {
+					var src=file.value;
+					img='<img src="' + src + '" class="img"/>';
+					parent.html(img);
+				}
+			}
+			$(".tuikuan_box .submit").click(function(){
+				var title=$("#select").val();
+				var reason=$("#reason").val();
+				var file=$("#file").val();
+
+				// 是否非空
+				if(!isKong(title,"请选择退款原因")){
+					return false;
+				}
+				// 是否非空
+				if(!isKong(file,$("#file").attr("placeholder"))){
+					return false;
+				}
+				mui('#tuikuan_box').popover('hide');
+				mui.alert("",'提交成功','确定' ,function() {
+					
+					window.location.href = "";
+				});
+			})	
+					
+		
+			</script>
+	</body>
+</html>

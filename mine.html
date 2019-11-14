@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+	</head>
+	<body>
+		<div class="header_top">
+			<div class="nav">
+				<p class="a active">积分套餐</p>
+				<p class="a">我的套餐</p>
+			</div>
+			<a href="mine_record.html" class="fr">收益记录</a>
+		</div>
+		<div class="box">
+			<div class="tab_box">
+				<div class="mine_box">
+					<img src="images/pool_1.png" class="mine_img"/>
+					<span class="mine_title">
+						<p>购物积分套餐1</p>
+						<p>送小型矿机(最高收益2倍)</p>
+						<p><i class="i">基础算力值：</i><i class="price">100</i></p>
+						<p><i class="i">购买金额：</i><i  class="price">100USDT</i></p>
+						<p><i class="i">可获积分：</i><i  class="price">1000</i></p>
+						<p><i class="i">抢购时间：</i><i  class="price">12:00:00-12:05:00</i></p>
+						<p><i class="i">剩余数量：</i><i  class="price">2</i></p>
+					</span>
+					<!--<a class="mine_buy">购买</a>-->
+					<a class="mine_buy1">购买</a>
+				</div>
+				<div class="mine_box">
+					<img src="images/pool_2.png" class="mine_img"/>
+					<span class="mine_title">
+						<p>购物积分套餐2</p>
+						<p>送中型矿机(最高收益2.5倍)</p>
+						<p><i class="i">基础算力值：</i><i class="price">120</i></p>
+						<p><i class="i">购买金额：</i><i  class="price">500USDT</i></p>
+						<p><i class="i">抢购时间：</i><i  class="price">12:00:00-12:05:00</i></p>
+						<p><i class="i">抢购数量：</i><i  class="price">2</i></p>
+					</span>
+					<a href="mine_buy.html" class="mine_buy">购买</a>
+					<!--<a class="mine_buy1">购买</a>-->
+				</div>
+				<div class="mine_box">
+					<img src="images/pool_3.png" class="mine_img"/>
+					<span class="mine_title">
+						<p>购物积分套餐3</p>
+						<p>送大型矿机(最高收益3倍)</p>
+						<p><i class="i">基础算力值：</i><i class="price">150</i></p>
+						<p><i class="i">购买金额：</i><i  class="price">1000USDT</i></p>
+						<p><i class="i">抢购时间：</i><i  class="price">12:00:00-12:05:00</i></p>
+						<p><i class="i">抢购数量：</i><i  class="price">2</i></p>
+					</span>
+					<!--<a class="mine_buy">购买</a>-->
+					<a class="mine_buy1">购买</a>
+				</div>
+				<div class="mine_box">
+					<img src="images/pool_4.png" class="mine_img"/>
+					<span class="mine_title">
+						<p>购物积分套餐4</p>
+						<p>送超级矿机(最高收益3.5倍)</p>
+						<p><i class="i">基础算力值：</i><i class="price">200</i></p>
+						<p><i class="i">购买金额：</i><i  class="price">3000USDT</i></p>
+						<p><i class="i">抢购时间：</i><i  class="price">12:00:00-12:05:00</i></p>
+						<p><i class="i">抢购数量：</i><i  class="price">2</i></p>
+					</span>
+					<a class="mine_buy">购买</a>
+					<!--<a class="mine_buy1">购买</a>-->
+				</div>
+			</div>
+			<div class="tab_box two">
+				<div class="mine_box">
+					<img src="images/pool_1.png" class="mine_img1"/>
+					<div class="">
+						<span class="mine_title">
+							<p>小型矿机</p>
+							<p><i>累计收益：</i><i>0.000</i></p>
+							<p><i>剩余收益：</i><i>0.000</i></p>
+							<p><i>订单号：</i><i>1234567891011121314151617</i></p>
+						</span>
+						<a href="mine_upgrade.html" class="mine_upgrade">升级</a>
+						<!--<a class="mine_upgrade1">已出局</a>-->
+					</div>	
+				</div>
+				<div class="warn"><i>*</i>温馨提示:用户您好，您的累计收益已达到出局收益的80%,请知悉！</div>
+			</div>
+		</div>
+		
+		<!--底部-->
+		<div id="footer" name="2"></div>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+	<script type="text/javascript">
+		var $div_li = $('.nav .a');
+        $('.nav .a').click(function(){
+            $(this).addClass("active").siblings().removeClass("active"); 
+                var index =  $div_li.index(this);  
+            $(".box .tab_box").eq(index).show().siblings().hide(); 
+		})	
+		
+		$(".mine_upgrade").click(function(){
+			$(".warn").show();
+		})
+	</script>
+</html>

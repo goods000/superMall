@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		
+		<!-- <script src="layer/layer.js"></script> -->
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{background: #F5F5F5;}
+		</style>
+		
+	</head>
+	<body>
+		<div class="user">
+			<div class="top">
+				<div class="header h_top">
+					<span class="txt">我的</span>
+				</div>
+				<!--公告-->
+				<!--<div class="gonggao">
+					<label class="label"><img src="images/laba.png" class="ico"></label>
+					<div class="l"> 
+						<marquee truespeed="65" scrollamount="2" >
+							<a href="news.html"><p>VFS进入测试阶段了</p></a>
+						</marquee>
+					</div>
+				</div>-->
+				<div class="info">
+					<div class="l">
+						<img src="images/logo.png" class="touxiang">
+						<div class="t">
+							<p class="name">蒸蒸日上</p>
+							<p class="id">ID：123456</p>
+						</div>
+					</div>
+					<!--<a href="invite.html" class="fr"><img src="images/erweima.png" ></a>-->
+				</div>
+				<a href="invite.html"><div id="buniess"></div></a>
+			</div>
+			
+			<div class="gongneng">	
+				<div class="title" onclick="window.location.href='order.html?type=0'">
+					<span class="txt">我的订单</span>
+					<span class="p">全部订单 <img src="images/more.png" class="more"></span>
+				</div>
+				<ul>
+					<!--<a href="order.html?type=1" >
+					<li>
+						<p class="ico"><img src="images/business_withOrder.png" ></p>
+						<p class="txt">待付款</p>
+					</li>
+					</a>-->
+					<a href="order.html?type=1">
+					<li>
+						<p class="ico"><img src="images/business_sendOut.png" ></p>
+						<p class="txt">待发货</p>
+						<!-- <span class="sp">2</span> -->
+					</li>
+					</a>
+					<a href="order.html?type=2">
+					<li>
+						<p class="ico"><img src="images/business_hadOrder.png" ></p>
+						<p class="txt">已发货</p>
+					</li>
+					</a>
+					<a href="order.html?type=3">
+					<li>
+						<p class="ico"><img src="images/business_cancelOrder.png" ></p>
+						<p class="txt">已完成</p>
+					</li>
+					</a>
+					</ul>
+			</div>
+			
+			<div class="ge_list">
+				<div class="">
+					<div class="gao"></div>
+					<a href="feedback.html" class="list1">
+						<div class="list_left">
+							<img src="images/feedback.png" class="tups_img1"/>
+							<span class="zi">
+								意见反馈
+							</span>
+						</div>
+						<img src="images/next.png" class="next_img"/>
+					</a>
+					<a href="team.html" class="list1">
+						<div class="list_left">
+							<img src="images/team.png" class="tups_img1"/>
+							<span class="zi">
+								我的团队
+							</span>
+						</div>
+						<img src="images/next.png" class="next_img"/>
+					</a>
+					<a href="news.html" class="list1">
+						<div class="list_left">
+							<img src="images/notice.png" class="tups_img1"/>
+							<span class="zi">
+								平台公告
+							</span>
+						</div>
+						<img src="images/next.png" class="next_img"/>
+					</a>
+					<a href="address.html" class="list1">
+						<div class="list_left">
+							<img src="images/address.png" class="tups_img1"/>
+							<span class="zi">
+								收货地址
+							</span>
+						</div>
+						<img src="images/next.png" class="next_img"/>
+					</a>
+					<a href="wallet_address.html" class="list1">
+						<div class="list_left">
+							<img src="images/wallet_address.png" class="tups_img1"/>
+							<span class="zi">
+								提币地址
+							</span>
+						</div>
+						<img src="images/next.png" class="next_img"/>
+					</a>
+					<a href="setup.html" class="list1">
+						<div class="list_left">
+							<img src="images/setup.png" class="tups_img1"/>
+							<span class="zi">
+								设置中心
+							</span>
+						</div>
+						<img src="images/next.png" class="next_img"/>
+					</a>
+				</div>
+			</div>
+			
+			<!--<div class="list">
+				<ul>
+					<li onclick="window.location.href='team.html'">
+						<p class="ico"><img src="images/team.png" ></p>
+						<p class="txt">我的团队</p>
+					</li>
+					<li onclick="window.location.href='my_asset.html'">
+						<p class="ico"><img src="images/asset.png" ></p>
+						<p class="txt">我的资产</p>
+					</li>
+					<li onclick="window.location.href='business_entry_1.html'">
+						<p class="ico"><img src="images/enter.png" ></p>
+						<p class="txt">商家入驻</p>
+					</li>
+					<li onclick="window.location.href='team.html'">
+						<p class="ico"><img src="images/bind_account.png" ></p>
+						<p class="txt">账户绑定</p>
+					</li>
+					<li onclick="window.location.href='address.html'">
+						<p class="ico"><img src="images/address.png" ></p>
+						<p class="txt">地址中心</p>
+					</li>
+					<li onclick="window.location.href='profit_mingxi.html'">
+						<p class="ico"><img src="images/profit_mingxi.png" ></p>
+						<p class="txt">收益明细</p>
+					</li>
+					<li onclick="window.location.href='feedback.html'">
+						<p class="ico"><img src="images/feedback.png" ></p>
+						<p class="txt">意见反馈</p>
+					</li>
+					<li onclick="window.location.href='setup.html'">
+						<p class="ico"><img src="images/setup.png" ></p>
+						<p class="txt">设置中心</p>
+					</li>
+				</ul>
+			</div>-->
+			
+		</div>
+		
+		<!-- 底部，name为几，第几个高亮 -->
+		<div id="footer" name="4"></div>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

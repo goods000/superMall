@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/business_user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script src="layer/layer.js"></script>
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		
+		<div class="header">
+			<a class="back" href="javascript:history.back(-1);"><img src="images/back.png"/></a>
+			<span class="txt">商家入驻(2/3)</span>
+		</div>
+		
+		<div class="business_entry">
+			<div class="steep">
+				<p class="title">仅需三步即可顺利入驻</p>
+				<ul>
+					<li onclick="window.location.href = 'business_entry_1.html'">
+						<p class="ico"><img src="images/enter_1.png" ></p>
+						<p class="txt">填写店家信息</p>
+					</li>
+					<li>
+						<p class="ico"><img src="images/enter_2_selected.png" ></p>
+						<p class="txt">上传身份信息</p>
+					</li>
+					<li>
+						<p class="ico"><img src="images/enter_3.png" ></p>
+						<p class="txt">等待审核通过</p>
+					</li>
+				</ul>
+			</div>
+			<div class="form">
+				<div class="group">
+					<label><s>*</s> 法人姓名</label>
+					<input type="" class="shopkeeper"   placeholder="请输入店主姓名"/>
+				</div>
+				<div class="group">
+					<label><s>*</s> 证件号码</label>
+					<input type="" class="idcard"  placeholder="请输入证件号码"/>
+				</div>
+				<div class="group" style="display:block;">
+					<label><s>*</s> 证件正面照片</label>
+					<div class="uplaod_box">
+						<div class="upload">
+							<div class="photo">
+								<div class="photo_l">
+									<img src="images/add1.png" class="ico"/> 
+									<p class="p">点击上传证件正面照片，注意图片的清晰</p>
+								</div>
+								<input type="file" class="file" id="file1" onchange="preview(this)" placeholder="请上传证件正面照片"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="group" style="display:block;">
+					<label><s>*</s> 证件背面照片</label>
+					<div class="uplaod_box">
+						<div class="upload">
+							<div class="photo">
+								<div class="photo_l">
+									<img src="images/add1.png" class="ico"/> 
+									<p class="p">点击上传证件背面照片，注意图片的清晰</p>
+								</div>
+								<input type="file" class="file" id="file2" onchange="preview(this)" placeholder="请上传证件背面照片"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			<input type="button"  class="submit button" value="提交"/>
+			
+			
+			
+		</div>
+		
+		<script src="js/check.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//图片预览
+			 function preview(file) {
+				var img;
+				var parent=$(file).prev();
+				if (file.files && file.files[0]) {
+					var reader = new FileReader();
+					reader.onload = function (evt) {
+						var src=evt.target.result;
+						img='<img src="' + evt.target.result + '" class="img"/>';
+					//	console.log(img)
+						parent.html(img);
+					}
+					reader.readAsDataURL(file.files[0]);
+				} else {
+					var src=file.value;
+					img='<img src="' + src + '" class="img"/>';
+					parent.html(img);
+				}
+			}
+			
+			$(".submit").click(function(){
+				var shopkeeper=$(".shopkeeper").val();
+				var idcard=$(".idcard").val();
+				var file1=$("#file1").val();
+				var file2=$("#file2").val();
+			
+				//是否非空
+				if(!isKong(shopkeeper,$(".shopkeeper").attr("placeholder"))){
+					return false;
+				}
+				//是否非空
+				if(!isKong(idcard,$(".idcard").attr("placeholder"))){
+					return false;
+				}
+				//是否非空
+				if(!isKong(file2,$("#file1").attr("placeholder"))){
+					return false;
+				}
+				//是否非空
+				if(!isKong(file2,$("#file2").attr("placeholder"))){
+					return false;
+				}
+				
+				$(".submit").attr("disabled",true);
+				layer.msg("提交成功", {
+					  icon: 1,//提示的样式
+					  time: 2000, //2秒关闭（如果不配置，默认是3秒）//设置后不需要自己写定时关闭了，单位是毫秒
+						end:function(){
+						window.location.href = "business_entry_3.html";
+						}
+				});
+				$(".submit").attr("disabled",false);
+			})
+			
+		</script>
+		
+		
+		
+	</body>
+</html>

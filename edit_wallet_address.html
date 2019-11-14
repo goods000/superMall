@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		
+		<!-- <script src="layer/layer.js"></script> -->
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/PCASClass.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<a class="back" href="javascript:history.back(-1);"><img src="images/back.png"/></a>
+			<span class="txt">修改收货地址</span>
+		</div>
+		<div class="edit_address">
+			<div class="form">
+				<!--<form>-->
+					<div class="group">
+						<label>钱包名称</label>
+						<input  class="username" placeholder="请输入钱包名称"/>
+					</div>
+					<div class="group">
+						<label>钱包地址</label>
+						<input  class="address" placeholder="请输入钱包地址"/>
+					</div>
+					<div class="group"  style="justify-content: flex-start;">
+						<label>设为默认地址</label>
+						<input type="checkbox" style="  width: 20px;"/>
+					</div>
+					<button class="submit">保存</button>
+				<!--</form>-->
+			</div>
+		</div>
+		<script src="layer/layer.js"></script>
+		<script src="js/check.js"></script>
+		<script>
+			$(".submit").click(function(){
+				var username=$(".username").val();
+				var address=$(".address").val();
+				
+				//是否非空
+				if(!isKong(username,"请输入钱包名称")){
+					return false;
+				}
+				
+				//是否非空
+				if(!isKong(address,"请输入钱包地址")){
+					return false;
+				}
+				
+				
+			mui.alert("","添加成功","确定",function(){
+				window.location.href = "wallet_address.html";
+			})
+				
+		})
+		</script>
+		
+		
+	</body>
+</html>

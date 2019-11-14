@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/business_user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<!-- <script src="layer/layer.js"></script> -->
+		<style type="text/css">
+			.layui-layer-setwin{display:none;}
+			/* 查看的图片 */
+			#showImg{max-height: 80vh;   overflow: auto;}
+			#showImg img{width: 100%;}
+			.tuikuan_btn{padding: 0 15px;}
+			.tuikuan_btn .a{display: block; width:45%; text-align: center;
+    color: #fff; font-size: 1rem; border: 0;padding: 8px 0px;
+    background: linear-gradient(to right,#3d95f6,#479df5);
+    border-radius: 10px;}
+	.tuikuan_btn .a.cancel{background: #9ebee0;}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<a class="back" href="javascript:history.back(-1);"><img src="images/back.png"/></a>
+			<span class="txt">订单详情</span>
+		</div>
+		<div class="business_order_detail">
+			<div class="buyer_info">
+				<div class="div">
+					<span>收货人:木木</span>
+					<span>188 8888 8888</span>
+				</div>
+				<div class="address">
+					收货地址：广东省深圳市龙华区明治街道油松工 业东路72号
+				</div>
+			</div>
+			<div class="list">
+				<ul>
+					<li class="li">
+						<div class="">
+							<img src="images/pro.png" class="img" />
+						</div>
+						<div class="l">
+							<p class="name">秋冬日式棉拖鞋</p>
+							<p class="p p1">一双</p>
+							<p class="p price"><label>￥</label> 240</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="goods">
+				<div class="info">
+					<div class="div">
+						<p class="l">支付状态</p>
+						<p class="state">已支付</p>
+					</div>
+					<div class="div1">
+						<label>支付方式:</label>
+						<p class="r">支付宝</p>
+					</div>
+					<div class="div1">
+						<label>支付时间:</label>
+						<p class="r">2019-04-22 14:42</p>
+					</div>
+					<div class="div1">
+						<label>发货时间:</label>
+						<p class="r">暂未发货</p>
+					</div>
+				</div>
+				<div class="info">
+					<div class="div">
+						<p class="l">快递状态</p>
+						<p class="state">未发货</p>
+					</div>
+					<div class="div1">
+						<label>发货公司:</label>
+						<p class="r">暂未信息</p>
+					</div>
+					<div class="div1">
+						<label>发货单号:</label>
+						<p class="r">暂无单号</p>
+					</div>
+					<div class="div1">
+						<label>退款凭证:</label>
+						<p class="r"><img src="images/login_bg.png" alt="" style="width: 200px;height: 100px;" onclick="showImgg('images/login_bg.png')"></p>
+					</div>
+					<div class="div tuikuan_btn">
+						<span class="a tijiao">确认退款</span>
+						<span class="a cancel">不退款</span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 发货按钮 -->
+			<div class="btn">
+				<a class="submit" href="javascript:;" id="openPopover">立即发货</a>
+			</div>
+		</div>
+
+		<!-- 发货弹窗 -->
+		<div id="popover" class=" mui-popover mui-popover-action mui-popover-bottom">
+			<div class="goodsentout_box">
+			<p class="title">立即发货</p>
+			<div class="div">
+				<div class="l">
+					<img src="images/sendoutname.png" class="ico">
+					<input type="" name="" id="name" value="" placeholder="输入快递公司名称"/>
+				</div>
+			</div>
+			<div class="div">
+				<div class="l">
+					<img src="images/orderNo.png" class="ico">
+					<input type="" name="" id="NO" value="" placeholder="输入快递单号"/>
+				</div>
+			</div>
+			<div class="btn">
+				<button type="button" class="a reset">取消</button>
+				<button type="button" class="a sub">确定</button>
+			</div>
+		</div>
+		</div>
+		
+	<div id="showImg" class="mui-popover mui-popover-action mui-popover-bottom" style="">
+		<div>
+			<img src="" class="img">
+		</div>
+		
+	</div>	
+		<script src="js/check.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script>
+	function showImgg(src){
+		console.log(src)
+		$("#showImg").find(".img").attr("src",src)
+		mui('#showImg').popover('toggle');
+	}		
+		$("#openPopover").click(function(){
+			mui('#popover').popover('show');
+		})
+		$(".goodsentout_box .reset").click(function(){
+			mui('.mui-popover').popover('hide');
+		})	
+		
+		$("#openPopover").click(function(){
+			mui('#showImg').popover('show');
+		})
+		
+		$(".tuikuan_btn .tijiao").click(function(){
+			var btnArray = ['取消', '确认'];
+			mui.confirm('','确定退款给买家？', btnArray, function(e) {
+				if (e.index == 1) {
+					mui.alert("","提交成功","确定",function(){
+						window.location.href = "";
+					})
+				} else {
+					mui.toast("取消")
+				}
+			})
+		})
+		$(".tuikuan_btn .cancel").click(function(){
+			var btnArray = ['取消', '确认'];
+			mui.confirm('','确定不退款给买家？', btnArray, function(e) {
+				if (e.index == 1) {
+					var btnArray = ['取消', '确定'];
+					mui.prompt('', '', '请输入拒绝理由：', btnArray, function(e) {
+						if (e.index == 1) {
+							console.log('拒绝理由：' + e.value)
+							mui.alert("","提交成功","确定",function(){
+								window.location.href = "";
+							})
+						} else {
+							mui.toast("取消")
+						}
+					})
+					
+				} else {
+					mui.toast("取消")
+				}
+			})
+		})
+		
+		$(".goodsentout_box .sub").click(function(){
+			var name=$("#name").val();
+			var NO=$("#NO").val();
+			//是否非空
+			if(!isKong(name,$("#name").attr("placeholder"))){
+				return false;
+			}
+			//是否非空
+			if(!isKong(NO,$("#NO").attr("placeholder"))){
+				return false;
+			}
+
+			mui('.mui-popover').popover('hide');
+			mui.alert("","发货成功","确定",function(){
+				window.location.href = "";
+			})
+		})
+		
+			
+		</script>
+		
+	</body>
+</html>

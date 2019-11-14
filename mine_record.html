@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		 <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		
+		<!-- <script src="layer/layer.js"></script> -->
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{background: #F7F7F7;}
+			.store{font-size: 1.1rem;color: #1F1F1F;display: flex;align-items: center;}
+			.store img{width: 1.1rem;}
+			.order .tab a{float:left;display: inline-block;width: 50%;text-align: center;padding: 1rem 0;font-size: 1rem;color: #222;position: relative;}
+			.order .list ul{width: 100%;}
+			.order li{width:100%;margin: auto;padding:10px;box-sizing: border-box;border-bottom: 1px solid #F5F5F5;background: #fff;}
+			.order p{float: left;margin: 5px 0;color: #333333;font-size: 1.2rem;}
+			.order p s{text-decoration: none;}
+			.order span{clear:both;display: block;color: #999999;font-size: 0.9rem;}
+			.order span:nth-child(3){color: #333333;font-size: 1.2rem;margin: 5px 0;}
+			.order i{float: right;font-style: normal;font-size: 16px;color: #FA3349;margin-top:5px;position: absolute;
+			    right: 10px;font-size: 1.3rem;}
+			.order i.fu{float: right;font-style: normal;font-size: 16px;color: #999999;margin-top:20px;position: absolute;
+			    right: 10px;font-size: 1.3rem;}
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<a class="back" href="user.html"><img src="images/back.png" /></a>
+			<span class="txt">订单管理</span>
+		</div>
+		<div class="order">
+			
+			<div class="tab">
+				<a href="javascritp:;" class="active">推荐</a>
+				<a href="javascritp:;">挖矿</a>
+
+			</div>
+			<!--全部-->
+			<div class="list on">
+				<ul>
+					<li>
+						<p>超级矿机</p>
+						<i>+3000</i>
+						<span>订单号:5446546545466564</span>
+						<span>2018-09-11 12:22</span>
+					</li>
+					<li>
+						<p>超级矿机</p>
+						<i>+64516156</i>
+						<span>2018-09-11 12:22</span>
+					</li>
+					<li>
+						<p>超级矿机</p>
+						<i class="fu">-540</i>
+						<span>2018-09-11 12:22</span>
+					</li>
+				</ul>
+			</div>
+
+			<!--待发货-->
+			<div class="list">
+				<ul>
+					<li>
+						<p>超级矿机</p>
+						<i>+3000</i>
+						<span>2018-09-11 12:22</span>
+					</li>
+					<li>
+						<p>超级矿机</p>
+						<i class="fu">-540</i>
+						<span>2018-09-11 12:22</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--底部-->
+		<!-- <div id="footer" name="4"></div>
+		<script src="js/public.js"></script> -->
+
+		<script>
+			function shoTab(type){
+				$(".tab a").removeClass("active").eq(type).addClass("active");
+				$(".list").removeClass("on").eq(type).addClass("on");
+				show();
+			}
+
+			$(".tab a").click(function() {
+				var index = $(".tab a").index($(this));
+				$(".tab a").removeClass("active").eq(index).addClass("active");
+				$(".list").removeClass("on").eq(index).addClass("on");
+				show();
+			})
+		</script>
+
+	</body>
+
+</html>
