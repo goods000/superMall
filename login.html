@@ -50,6 +50,10 @@
 		<script src="js/check.js"></script>
 		
 		<script>
+			$("input").on("blur",function(){
+		        var toFix=$(this).offset().top;
+		        window.scroll(0,toFix);//失焦后强制让页面归位
+		    });
 			
 			// 记住密码
 			function remember(obj) {
