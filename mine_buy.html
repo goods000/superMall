@@ -15,12 +15,23 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/user.css">
 		<script src="js/jquery-1.11.0.min.js"></script>
+		<style type="text/css">
+			.tips_buy{color: #a3a3a3;display: block;margin: 10px;font-size: 14px;}
+			.choice{color: #a3a3a3;font-size:14px;line-height:15px;text-align: center;}
+			.choice .open{color: #DA2C46;margin-left: 5px;}
+			.mo{display: none;width: 100%;height: 100%;position: fixed;overflow: auto;background-color: rgba(0,0,0,0.7);top: 0px;left: 0px;z-index: 99;text-align: center;}
+			.mo .mo_box{width: 70%;height: 60vh;overflow: scroll;position: relative;background: #fff;margin: 20vh auto;padding:15px;border-radius: 10px;}
+			.mo .mo_box div{color: #666;font-size: 14px;text-align: left;}
+			.mo .mo_box .close_btn{font-size: 14px;     background: linear-gradient(to left,#F92C4A,#FE5745);
+    		border-radius: 25px; color: #fff;padding: 8px 0;margin:2% auto;width: 40%;float: right;}
+		</style>
 	</head>
 	<body>
 		<div class="header">
 			<a class="back" href="javascript:history.back(-1);"><img src="images/back.png" /></a>
 			<span class="txt">购买</span>
-		</div> <div class="shop">
+		</div> 
+		<div class="shop">
 	    	<div class="buy_b">
 				<img src="images/pool_1.png" />
 				<div class="buy_i_b">
@@ -49,11 +60,56 @@
 			<input type="tel" readonly="readonly" name="" id="num" value="45455121212" />
 		</div>
 		
+		<div class="tips_buy">注:第一次购买套餐，请到设置中心设置支付密码。</div>
+		<div class="choice">
+			<input id="remember" type="checkbox"> 
+			<b class="text_a">我已阅读<span class="open">《用户协议》</span></b> 
+	   </div>
+	   
 		<input type="button" class="btn_submit" value="立即购买" />
 		
-		
+		<div class="mo">
+			<div class="mo_box">
+				<div>
+					<!-- <span class="close">×</span> -->
+					<p>本着平等，自愿，公平，互惠互利和诚实守信的原则，“我是矿工”APP与用户之间就用户购买算力事宜进行合作，双方达成以下协议。<br>
+					甲方(购买算力用户)：_______________<br>
+					乙方(我是矿工APP)：_______________</p>
+
+					<p>一．服务内容与方式<br>
+					1.1算力服务套餐及价格<br>
+					甲方选择购买算力套餐_____,费用为_____USDT;初始算力服务期限为1000天（自购买日），实际根据矿机寿命决定，甲方负责矿机的日常维护。<br>
+					1.2算力服务模式<br>
+					1.2.1甲方认购乙方提供的算力服务，乙方提供全面的专业运营服务，包括支付收益至甲方指定钱包地址等。<br>
+					算力挖矿收益可参考www.btc.com<br>
+					甲方比特币账号地址：：______________________________<br>
+					1.2.2收益透明：购买的算力产生的所有数字货币，甲方可在平台账号上进行查询；<br>
+					1.2.3收益发放流程：每日北京时间凌晨零点至两点，结算上一日的收益到用户平台钱包中，用户可随时发起提现到自己的钱包地址中，每日14点前提现的当日14点后处理，每日14点后提现的，次日14点后处理。<br>
+					二．双方的权利与义务<br>
+					为保障甲乙双方合法权益，经双方协商一致，甲乙双方就购买算力服务协议达成如下责任标准。<br>
+					2.1 本产品不同于一般的消费类电子产品，而是根据用户需求所特殊定制的产品，投资需谨慎，一旦购买则不予退款。<br>
+					2.2 乙方应在协议服务期限内按时支付收益至甲方的平台钱包内，甲方发起提现后按时把相应的数字资产发给甲方。<br>
+					2.3 由于比特币价格一直发生波动变化以及比特币挖矿难度会按照周期调整，这都会导致挖矿收益产生波动，用户在购买算力套餐时应充分知晓该事项。<br>
+					三．违约责任<br>
+					3.1 任何一方违反本协议任何约定的，均构成违约；违约方应承担继续履行，采取补救措施，赔偿损失等违约责任；因一方违约所产生的律师费，诉讼费，公正费等费用由违约方承担。<br>
+					3.2 如若因不可抗力因素影响，如自然灾害（洪水，泥石流，地震等）、政治影响（国家发布文件等），或者矿机故障，矿场爆发地区停电事故或暂停供电，导致矿机暂停工作，算力有所波动（以当日公示公告为准），甲乙双方应本着诚实守信，互惠互谅，共同承担相应的后果，乙方不向甲方负担经济损失。<br>
+					四．风险提示<br>
+					4.1 数字货币市场是一个全新市场，具有24小时开放交易、无涨跌幅限制等特点，其币价涨跌具有较大的不确定性，因此挖矿收益也存在波动，用户需要仔细评估自己的风险承担能力，在自己可接受的风控范围内投资算力套餐。<br>
+					4.2 本协议不涉及数字资产交易，若甲方自行参与第三方的数字资产交易，应当自行承担责任和风险。<br>
+					4.3 甲方了解并接受，如因相关国家法律、法规和规范性文件的指定或者修改等客观情况发生变化，导致挖矿行为被叫停或者禁止的，本协议自动终止。</p>
+
+					注：本协议自用户购买套餐后自动生效。
+				</div>	
+				<p class="close_btn">确认</p>
+			</div>
+		</div>
 	</body>
 <script>
-		
+		$(".open").click(function(){
+			$(".mo").show();
+		})
+		$(".close_btn").click(function(){
+			$(".mo").hide();
+		})
 </script>	
 </html>

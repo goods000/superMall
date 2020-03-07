@@ -1,60 +1,90 @@
-	
-<div class="height1"></div>
-<div class="footer">
-	<ul>
-		<li>
-			<a href="index.html">
-			<div class="footer-div">
-			<p><img src="images/home.png"/></p>
-			<p class="" >首页</p>
-			</div>
-			</a>
-		</li>
-		
-		<li>
-			<a href="mine.html">
-			<div class="footer-div">
-			<p><img src="images/classify.png"/></p>
-			<p class="">矿机</p>
-			</div>
-			</a>
-		</li>
-		<li>
-			<a href="wallet.html">
-			<div class="footer-div">
-			<p><img src="images/wallet.png"/></p>
-			<p class="" >钱包</p>
-			</div>
-			</a>
-		</li>
-		
-		<li>
-			<a href="user.html">
-			<div class="footer-div">
-			<p><img src="images/user.png"/></p>
-			<p class="" >我的</p>
-			</div>
-			</a>
-		</li>
-		
-		
-	</ul>
-</div>
-<script>
-	function msg(){
-		mui.toast('暂未开放，敬请期待！')
-	}
-	
-	var name=$('#footer').attr('name');
-	console.log("name:"+name)
-	show_footer(name)
-	function show_footer(name){
-		var src=$(".footer li:nth-of-type("+name+") img").attr("src");
-		src=src.slice(0,-4)
-		// console.log("src:"+src)
-		src=src+"_selected.png";
-	//	console.log("src:"+src)
-		$(".footer li:nth-of-type("+name+")").addClass("selected");
-		$(".footer li:nth-of-type("+name+") img").attr("src",src);
-	}
-</script>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{margin:0px; padding:0px; _min-height:1px;list-style: none; -moz-box-sizing: border-box; 
+			 /*Firefox3.5+*/-webkit-box-sizing: border-box; /*Safari3.2+*/-o-box-sizing: border-box;
+			 /*Opera9.6*/-ms-box-sizing: border-box; /*IE8*/box-sizing: border-box;
+			 -webkit-tap-highlight-color: rgba(0,0,0,0); }
+			.height1{height: 74px;}
+			.footer{margin-top: 2rem;    background: #fff;width: 100%;    z-index: 66;
+			position: fixed;bottom: 0;left: 0;border-top: 1px solid #F0F0F0; height: 48px;}
+			.footer ul{overflow: hidden;display: flex;justify-content: space-between;}
+			.footer li{float: left;width: 25%;text-align: center;box-sizing: border-box;
+			font-size: 12px; padding: 5px 0;display: flex;flex-direction: column;justify-content: space-between;}
+			.footer .active{}
+			.footer img{width: 20px;    color: #fff;    display: block; margin: auto; vertical-align: top;}
+			.footer p{text-align: center;margin:0;font-size: 0.8rem;color: #56585C;}
+			.footer a{color: #A1ABB7;display: block;text-decoration: none;}
+			.footer-div{width: 80%;margin: 0 auto;}
+			.footer .selected p{color: #FF1B39;}
+		</style>
+	</head>
+	<body>
+		<div class="height1"></div>
+		<div class="footer">
+			<ul>
+				<li>
+					<a href="index1.html">
+					<div class="footer-div">
+					<p><img src="images/home.png"/></p>
+					<p class="" >首页</p>
+					</div>
+					</a>
+				</li>
+				
+				<li>
+					<a href="mine.html">
+					<div class="footer-div">
+					<p><img src="images/classify.png"/></p>
+					<p class="">矿机</p>
+					</div>
+					</a>
+				</li>
+				<li>
+					<a href="wallet.html">
+					<div class="footer-div">
+					<p><img src="images/wallet.png"/></p>
+					<p class="" >钱包</p>
+					</div>
+					</a>
+				</li>
+				
+				<li>
+					<a href="user.html">
+					<div class="footer-div">
+					<p><img src="images/user.png"/></p>
+					<p class="" >我的</p>
+					</div>
+					</a>
+				</li>
+				
+				
+			</ul>
+		</div>
+		<script>
+			function msg(){
+				mui.toast('暂未开放，敬请期待！')
+			}
+			
+			var name=$('#footer').attr('name');
+			console.log("name:"+name)
+			show_footer(name)
+			function show_footer(name){
+				var src=$(".footer li:nth-of-type("+name+") img").attr("src");
+				src=src.slice(0,-4)
+				// console.log("src:"+src)
+				src=src+"_selected.png";
+			//	console.log("src:"+src)
+				$(".footer li:nth-of-type("+name+")").addClass("selected");
+				$(".footer li:nth-of-type("+name+") img").attr("src",src);
+			}
+			
+			//引入底部导航栏需要在引入的页面添加标签并且设置id="footer" name="下标"
+			//<div id="footer" name="1"></div>
+		</script>
+	</body>
+</html>	
