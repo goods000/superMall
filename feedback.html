@@ -36,27 +36,30 @@
 				</div>
 				<div class="group">
 					<label>标&nbsp;&nbsp;&nbsp;题：</label>
-					<input title="请用一句话描叙您的问题" placeholder="请用一句话描叙您的问题20字以内"  class="title" id="title" oninput="InputTitle(this)" />
+					<input type="hidden" id="feedback_img" readonly="readonly" >
+					<input title="请用一句话描叙您的问题" placeholder="请用一句话描叙您的问题20字以内"  class="title" id="feedback_title" oninput="InputTitle(this)" />
 				</div>
 				<div class="group" style="display: block;">
 					<textarea rows="" cols="" class="con" id="con" placeholder="请详细说明问题，以便客服人员更好的回答您的问题。500字以内" style="-webkit-user-select: auto;" contenteditable="true"
 					  oninput="InputCon(this)" class="title" oninput="this.value=this.value.length>500?this.value.substr(0,5000):this.value;"></textarea>
-					<div class="box">
-						<div class="uplaod_box">
-							<div class="upload">
-								<div class="photo">
-									<div class="photo_l">
-										<img src="images/add.png" class="ico"/> 
+					<form id="fileForm" method="post" enctype="multipart/form-data">
+						<div class="box">
+							<div class="uplaod_box">
+								<div class="upload">
+									<div class="photo">
+										<div class="photo_l">
+											<img src="images/add.png" class="ico"/> 
+										</div>
+										<input type="file" class="file" id="file" onchange="preview(this)"/>
 									</div>
-									<input type="file" class="file" id="file" onchange="preview(this)"/>
 								</div>
 							</div>
+							<p>添加图片能够让客服人员更直观明白您的问题！</p>
 						</div>
-						<p>添加图片能够让客服人员更直观明白您的问题！</p>
-					</div>
+					</form>	
 				</div>
 				<!--<div class="height1"></div>-->
-				<button class="submit">提交</button>
+				<button class="submit" id="userFeedBack">提交</button>
 			</div>
 			
 		</div>
@@ -93,27 +96,79 @@
 			}
 		
 			
-			$(".submit").click(function(){
-				var title=$("#title").val();
-				var con=$("#con").val();
-				var file=$("#file").val();
-				// 是否非空
-				if(!isKong(title,$("#title").attr("placeholder"))){
-					return false;
+			var feedback_title="";
+			var feedback_content="";
+			//提交意见反馈
+			$("#userFeedBack").click(function(){
+				var pattern=/[`~!@#$^&*()=|{}':;',\\\[\]\.<>\/?~！@#￥……&*（）——|{}【】'；：""'。，、？]/g;
+				var feedback_title_content = $("#feedback_title").val()
+				feedback_title = feedback_title_content.replace(pattern,"");
+				if(feedback_title==""){
+					layer.alert("请输入反馈标题", {icon: 5,title: "提示"});
+					return;
 				}
-				// 是否非空
-				if(!isKong(con,$("#con").attr("placeholder"))){
-					return false;
+				var feedback_content_content = $("#feedback_content").val()
+				feedback_content = feedback_content_content.replace(pattern,"");
+				if(feedback_content==""){
+					layer.alert("请输入反馈内容", {icon: 5,title: "提示"});
+					return;
 				}
-				if(!isSpecialChar(con)){
-					return false;
+				$("#userFeedBack").attr("disabled",true);
+				layer.msg('提交中...', {icon: 16,shade: 0.01});
+				if($("#file").val()!=""){
+					var imgdata = new FormData($('#fileForm')[0]);
+					imgdata.append("directory", "feedBack");
+					$.ajax({
+				        url: "/common/fileDeal/uploadLocalFile",
+				        data: imgdata,
+				        type: "post",
+				        processData: false,
+				        contentType: false,
+				        success: function(data) {
+				        	if(data.success==true){
+				        		$("#feedback_img").val(data.data);
+				        		userFeedBack();
+					    	}else{
+					    		layer.alert(data.msg, {icon: 5,title: "提示"});
+					    	} 
+				        },
+				        error:function(jqXHR, textStatus, errorThrown){
+							alert("文件大小不能超过10M");
+						}
+				    })
+				}else{
+					userFeedBack();
 				}
-				
-				mui.alert("","提交成功" ,"确定")
 			})
 			
 			
-			
+			//提交意见反馈的内容
+			function userFeedBack(){
+				var param = {
+					'feedback_title': feedback_title,
+					'feedback_content': feedback_content,
+					'feedback_img': $("#feedback_img").val(),
+				}
+				$("#userFeedBack").attr("disabled",true);
+				layer.msg('处理中...', {icon: 16,shade: 0.01});
+				Ajax.submitAjaxToJSON('/web/user/feedBack/addUserFeedBack',param,function(data){
+					layer.closeAll();
+					if(data.success==true){
+						layer.msg(data.msg,{icon:1,time : 1000},function(){
+							userFeedBackCenter();
+						});
+					}else{
+						$("#userFeedBack").attr("disabled",false);
+						layer.alert(data.msg, {icon: 5,title: "提示"});
+					} 
+				},function(jqXHR, textStatus, errorThrown){
+					if(errorThrown != 'abort'){
+						$("#userFeedBack").attr("disabled",false);
+			        	//ajax被调用abort后执行的方法
+			        	alert('error');
+			   		}
+				})
+			}
 			
 		</script>
 		

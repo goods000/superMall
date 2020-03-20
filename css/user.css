@@ -112,6 +112,7 @@ background: linear-gradient(to left,#F92C4A,#F92C4A,#FE5745);margin: 10px auto;b
 .news_detail .time{width:  100px;font-size: 0.8rem;margin-top: 10px;color:#A8ADB3;display: block;}
 .news_detail  .con{font-size: 0.8rem;margin-top: 10px;overflow: hidden;line-height: 23px;color:#A8ADB3;}
 .news_detail  .con img{width: 100%;}
+.news_detail img{width: 100%;}
 
 /*--------------------------地址列表-------------------------------*/
 .address{overflow: hidden;}
@@ -382,6 +383,17 @@ display: flex;justify-content: space-between;flex-direction: column;background: 
 .user .top .buniess .txt i{font-size: 0.2rem;margin-left: 10px;}
 .wallet_top .w_gg ul{margin-top: 0px !important;} 
 .wallet_top .w_gg li .txt{font-weight: 100 !important;} 
+.support{margin-top: 15px;}
+.support div{clear:both;display: block;color: #333333;font-size: 0.9rem;text-decoration: none;margin: 5px 10px;font-size: 1.3rem;margin-bottom: 5px;}
+.support div s{color: #333333;text-decoration: none;border-right: 4px solid #FA3349;margin-right: 8px;margin-left: 5px;height: 15px;display: inline-block;}
+.suppor_box ul li{float: left;text-align: center;width: 46%;margin: 2%;padding: 2px 0 8px;}
+.suppor_box ul li:nth-child(1){background-image: url(../images/wallte_1.png);background-size: 100% 100%;background-repeat: no-repeat;}
+.suppor_box ul li:nth-child(2){background-image: url(../images/wallte_2.png);background-size: 100% 100%;background-repeat: no-repeat;}
+.suppor_box ul li:nth-child(3){background-image: url(../images/wallte_3.png);background-size: 100% 100%;background-repeat: no-repeat;}
+.suppor_box ul li:nth-child(4){background-image: url(../images/wallte_4.png);background-size: 100% 100%;background-repeat: no-repeat;}
+.suppor_box ul li div{color: #333333;margin-bottom: 10px;font-size: 15px;}
+.suppor_box ul li p{color: #FFFFFF;margin:2px 0;font-size: 14px;}
+
 
 .buy_box{margin-top: 20px;}
 .buy_box a{width: 100%;}

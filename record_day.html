@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<style type="text/css">
+			body{background: #fff;}
+			.record{background: url(images/record_day_top.png) !important;background-size: 100% 100% !important;background-repeat: no-repeat;}
+			.list_record i{margin-top: 5px !important;}
+			.list_record div{clear:both;display: block;color: #333333;font-size: 0.9rem;text-decoration: none;margin: 5px 0;font-size: 1.3rem;margin-bottom: 15px;}
+			.list_record div s{color: #333333;text-decoration: none;border-right: 4px solid #FA3349;margin-right: 8px;height: 15px;display: inline-block;}
+			.list_record .time,.list_record .time s{color: #999;}
+			.list_record li{width:100%;margin: auto;padding:10px;margin-top:12px;box-sizing: border-box;background: #fff;display: inline-block;}
+			.list_record p{float: left;margin: 5px 0;color: #333333;font-size: 1.2rem;}
+			.list_record p s{text-decoration: none;}
+			.list_record span{clear:both;display: block;color: #999999;font-size: 0.9rem;}
+			.list_record i{float: right;font-style: normal;font-size: 16px;color: #FA3349;margin-top:20px;position: absolute;
+			    right: 10px;font-size: 1.3rem;}
+			.list_record i.fu{float: right;font-style: normal;font-size: 16px;color: #999999;margin-top:20px;position: absolute;
+			    right: 10px;font-size: 1.3rem;}
+			.record .num_box{margin: 20px 15px 0;display: grid;background: url(images/record_day.png);background-repeat: no-repeat;background-size: 100% 100%;padding: 20px 15px;} 
+			.record .num_box .num{color: #E3CC9C;text-align: left;}
+			.record .num_box .num:nth-child(2){color: #E3CC9C;font-size: 1.4rem;margin: 20px 0 25px;}
+			.record .num_box .num i{color: #E3CC9C;font-size: 1.0rem;margin-left: 8px;}
+			.jilu .list_record{overflow: hidden;display: none;}
+			.jilu .list_record.on{display: block;}
+		</style>
+</head>
+
+<body>
+	<div class="record">
+		<div class="header h1 h_top">
+			<a class="back" href="javascript:history.back(-1);"><img src="images/back1.png"/></a>
+			<span class="txt">我的收益</span>
+		</div>
+		<div class="num_box">
+			<p class="num">累计总收益</p>
+			<p class="num">0.0000<i>BTC</i></p>
+		</div>
+	</div>
+	
+	<div class="jilu">
+		<!--动态收益-->
+		<div class="list_record on">
+			<ul>
+				<li>
+					<div><s></s>动态收益</div>
+					<p>今天动态收益</p>
+					<i>00.00</i>
+				</li>
+				<li>
+					<div><s></s>静态收益</div>
+					<p>今日静态收益</p>
+					<i>00.00</i>
+				</li>
+			</ul>
+		</div>
+		
+		
+	</div>	
+</body>
+<script type="text/javascript">
+	
+</script>
+</html>

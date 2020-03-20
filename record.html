@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="超级链商城" />
+		<meta name="description" content="超级链商城" />
+		<title>超级链商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<style type="text/css">
+			body{background: #fff;}
+			.list_record i{margin-top: 5px !important;}
+			.list_record div{clear:both;display: block;color: #333333;font-size: 0.9rem;text-decoration: none;margin: 5px 0;}
+			.list_record div s{color: #333333;font-size: 0.9rem;text-decoration: none;}
+			.list_record .time,.list_record .time s{color: #999;}
+			.list_record li{width:100%;margin: auto;padding:10px;box-sizing: border-box;border-bottom: 1px solid #F5F5F5;background: #fff;}
+			.list_record p{float: left;margin: 5px 0;color: #333333;font-size: 1.2rem;}
+			.list_record p s{text-decoration: none;}
+			.list_record span{clear:both;display: block;color: #999999;font-size: 0.9rem;}
+			.list_record i{float: right;font-style: normal;font-size: 16px;color: #FA3349;margin-top:20px;position: absolute;
+			    right: 10px;font-size: 1.3rem;}
+			.list_record i.fu{float: right;font-style: normal;font-size: 16px;color: #999999;margin-top:20px;position: absolute;
+			    right: 10px;font-size: 1.3rem;}
+			.record .num_box{margin: 20px 0;display: inline-block;} 
+			.record .num_box .num{text-align: center;color: #fff;}
+			.record .record_box{display: flex;flex-flow: row;align-items: center;justify-content: space-between;padding: 0 15px;}
+			.record .record_box div {margin-bottom: 10px;}
+			.record .record_box div p{color: #fff;}
+			.jilu{overflow: hidden;}
+			.jilu .tab{overflow: hidden;background: #fff;}
+			.jilu .tab a{float:left;display: inline-block;width: 50%;text-align: center;padding: 1rem 0;font-size: 1rem;color: #222;position: relative;}
+			.jilu .tab a.active{color: #FF3336;}
+			.jilu .tab a.active::after{content: " ";position: absolute;bottom: 0;left: 25%;width: 50%;height: 2px; background:  #FF3336;}
+			.jilu .list_record{overflow: hidden;display: none;}
+			.jilu .list_record.on{display: block;}
+		</style>
+</head>
+
+<body>
+	<div class="record">
+		<div class="header h1 h_top">
+			<a class="back" href="javascript:history.back(-1);"><img src="images/back1.png"/></a>
+			<span class="txt">收益</span>
+		</div>
+		<div class="num_box">
+			<p class="num">累计收益</p>
+			<p class="num">00.00</p>
+		</div>
+		<div class="record_box">
+			<div class="">
+				<p class="num">动态收益</p>
+				<p class="num">00.0000</p>
+			</div>
+			<div class="">
+				<p class="num">静态收益</p>
+				<p class="num">00.0000</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="jilu">
+		<div class="tab">
+			<a href="javascript:;" class="active">动态收益</a>
+			<a href="javascript:;">静态收益</a>
+		</div>
+	
+		<!--动态收益-->
+		<div class="list_record on">
+			<ul>
+				<li>
+					<p>动态收益</p>
+					<i>+0.30</i>
+					<div><s>流水账号：</s>5464654131354843513515313513135454</div>
+					<div class="time"><s>时间：</s>2018-09-11 12:22</div>
+				</li>
+				<li>
+					<p>动态收益</p>
+					<i>+0.55</i>
+					<div><s>流水账号：</s>5464654131354843513515313513135454</div>
+					<div class="time"><s>时间：</s>2018-09-11 12:22</div>
+				</li>
+				<li>
+					<p>动态收益</p>
+					<i>+3.00</i>
+					<div><s>流水账号：</s>5464654131354843513515313513135454</div>
+					<div class="time"><s>时间：</s>2018-09-11 12:22</div>
+				</li>
+				<li>
+					<p>动态收益</p>
+					<i>+0.30</i>
+					<div><s>流水账号：</s>5464654131354843513515313513135454</div>
+					<div class="time"><s>时间：</s>2018-09-11 12:22</div>
+				</li>
+			</ul>
+		</div>
+		<!--静态收益-->
+		<div class="list_record ">
+			<ul>
+				<li>
+					<p>静态收益</p>
+					<i>+0.56</i>
+					<div><s>流水账号：</s>5464654131354843513515313513135454</div>
+					<div class="time"><s>时间：</s>2018-09-11 12:22</div>
+				</li>
+				<li>
+					<p>静态收益</p>
+					<i>+0.11</i>
+					<div><s>流水账号：</s>5464654131354843513515313513135454</div>
+					<div class="time"><s>时间：</s>2018-09-11 12:22</div>
+				</li>
+				<li>
+					<p>静态收益</p>
+					<i>+6.00</i>
+					<div><s>流水账号：</s>5464654131354843513515313513135454</div>
+					<div class="time"><s>时间：</s>2018-09-11 12:22</div>
+				</li>
+			</ul>
+		</div>
+		
+	</div>	
+</body>
+<script type="text/javascript">
+	$(".tab a").click(function() {
+		var index = $(".tab a").index($(this));
+		$(".tab a").removeClass("active").eq(index).addClass("active");
+		$(".list_record").removeClass("on").eq(index).addClass("on");
+		show();
+	})
+</script>
+</html>
